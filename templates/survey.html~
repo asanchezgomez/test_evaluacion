@@ -56,8 +56,6 @@
 		</div>
 	</div>
 
-
-		<!--Segunda parte correspondiente a las Preguntas-->
 		<ol class="survey-questions">
 		{% for category in categories %}
 			<h3 class="collapsible">{{category|title}} Questions<span></span></h3>
