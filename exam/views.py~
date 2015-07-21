@@ -39,7 +39,7 @@ def SurveyDetail(request, id):
 	return render(request, 'survey.html', {'response_form': form, 'survey': survey, 'categories': categories})
 
 def Confirm(request, uuid):
-	email = settings.support_email
+	email = survey.settings.support_email
 	return render(request, 'confirm.html', {'uuid':uuid, "email": email})
 
 def privacy(request):

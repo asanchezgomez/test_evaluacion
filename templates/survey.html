@@ -3,7 +3,7 @@
 
 {% block body %}
 
-<h1>Welcome to {{survey.name|title}}</h1>
+<h1>Bienvenido al {{survey.name|title}}</h1>
 <div class="survey-description">
 	{{survey.description|safe}}
 </div>
@@ -12,7 +12,7 @@
 	<form action="/exam/survey/{{survey.id}}/" method="post">{% csrf_token %}
 
 		<!--Primera parte correspondiente al Response Metadata-->
-		<h3 class="collapsible" id="response_metadata">Response Metadata<span></span></h3>
+		<h3 id="response_metadata">Datos del estudiante<span></span></h3>
 		<div class="category-container">
 
 		<!--Campo del Interviewer-->
@@ -34,33 +34,13 @@
 				{{ response_form.interviewee }}
 			</div>
 		</div>
-
-		<!--Campo de texto Conditions-->
-		<div class="field-wrapper">
-			{{ response_form.conditions.errors }}
-			{{ response_form.conditions.label_tag }}
-			<span class="form-help-text">{{ response_form.conditions.help_text}}</span>
-			<div class="form-field-body">
-				{{ response_form.conditions }}
-			</div>
-		</div>
-
-		<!--Campo de texto Comments-->
-		<div class="field-wrapper">
-			{{ response_form.comments.errors }}
-			{{ response_form.comments.label_tag }}
-			<span class="form-help-text">{{ response_form.comments.help_text}}</span>
-			<div class="form-field-body">
-				{{ response_form.comments }}
-			</div>
-		</div>
 	</div>
 
 
 		<!--Segunda parte correspondiente a las Preguntas-->
 		<ol class="survey-questions">
 		{% for category in categories %}
-			<h3 class="collapsible">{{category|title}} Questions<span></span></h3>
+			<h3>Preguntas de la {{category|title}}<span></span></h3>
 			<div class="category-container">
 			{% for field in response_form %}
 				{% if field.field.widget.attrs.category == category %}
@@ -86,7 +66,7 @@
 		{% endfor %}
 		</ol>
 
-		<div class="submit-button"><input type="submit" value="I'm done!"></div>
+		<div class="submit-button"><input type="submit" value="Enviar"></div>
 	</form>
 
 </div>

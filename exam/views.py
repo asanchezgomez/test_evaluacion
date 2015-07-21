@@ -42,7 +42,4 @@ def Confirm(request, uuid):
 	email = survey.settings.support_email
 	return render(request, 'confirm.html', {'uuid':uuid, "email": email})
 
-def privacy(request):
-	return render(request, 'privacy.html')
-
 

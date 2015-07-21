@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import models
-from survey.models import Question, Category, Survey, Response, AnswerText, AnswerRadio, AnswerSelect, AnswerInteger, AnswerSelectMultiple
+from exam.models import Question, Category, Survey, Response, AnswerText, AnswerRadio, AnswerSelect, AnswerInteger, AnswerSelectMultiple
 from django.utils.safestring import mark_safe
 import uuid
 
@@ -14,7 +14,7 @@ class HorizontalRadioRenderer(forms.RadioSelect.renderer):
 class ResponseForm(models.ModelForm):
 	class Meta:
 		model = Response	
-		fields = ('interviewer', 'interviewee', 'conditions', 'comments')
+		fields = ('name','interviewee')
 
 	def __init__(self, *args, **kwargs):
 		# expects a survey object to be passed in initially
