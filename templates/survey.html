@@ -15,23 +15,23 @@
 		<h3 id="response_metadata">Datos del estudiante<span></span></h3>
 		<div class="category-container">
 
-		<!--Campo del Interviewer-->
+		<!--Campo del Nombre-->
 		<div class="field-wrapper question-required">
-			{{ response_form.interviewer.errors }}
-			<span class="asterix"> * </span>{{ response_form.interviewer.label_tag }}
-			<span class="form-help-text">{{ response_form.interviewer.help_text}}</span>
+			{{ response_form.name.errors }}
+			<span class="asterix"> * </span>{{ response_form.name.label_tag }}
+			<span class="form-help-text">{{ response_form.name.help_text}}</span>
 			<div class="form-field-body">
-				{{ response_form.interviewer }}
+				{{ response_form.name }}
 			</div>
 		</div>
 
-		<!--Campo del Interviewee-->
+		<!--Campo del Apellido-->
 		<div class="field-wrapper question-required">
-			{{ response_form.interviewee.errors }}
-			<span class="asterix"> * </span>{{ response_form.interviewee.label_tag }}
-			<span class="form-help-text">{{ response_form.interviewee.help_text}}</span>
+			{{ response_form.surname.errors }}
+			<span class="asterix"> * </span>{{ response_form.surname.label_tag }}
+			<span class="form-help-text">{{ response_form.surname.help_text}}</span>
 			<div class="form-field-body">
-				{{ response_form.interviewee }}
+				{{ response_form.surname }}
 			</div>
 		</div>
 	</div>

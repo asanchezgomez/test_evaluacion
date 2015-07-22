@@ -94,8 +94,8 @@ class Response(models.Model):
 	created = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)
 	survey = models.ForeignKey(Survey)
-	interviewer = models.CharField('Nombre', max_length=400)
-	interviewee = models.CharField('Apellidos', max_length=400)
+	name = models.CharField('Nombre', max_length=400)
+	surname = models.CharField('Apellidos', max_length=400)
 	interview_uuid = models.CharField("Interview unique identifier", max_length=36)
 
 	# Getter name
